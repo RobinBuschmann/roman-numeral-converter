@@ -31,12 +31,12 @@ describe('toRomanNumeral()', () => {
 
     it('should fail due to passed negative integer value', () => {
         const testValue = -99;
-        expect(toRomanNumeral(testValue)).to.throw(/Negative number values are not allowed/);
+        expect(() => toRomanNumeral(testValue)).to.throw(/Negative number values are not allowed/);
     });
 
     it('should fail due to passed float number', () => {
         const testValue = 1.2345;
-        expect(toRomanNumeral(testValue)).to.throw(/Flout number values are not allowed/);
+        expect(() => toRomanNumeral(testValue)).to.throw(/Float number values are not allowed/);
     });
 
 });
