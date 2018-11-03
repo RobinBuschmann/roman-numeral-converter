@@ -3,8 +3,10 @@ import {toRomanNumeral} from './roman-numeral-converter';
 
 describe('toRomanNumeral()', () => {
 
+    type TestSet = [number, string];
+
     it('should convert integer number to simple roman numeral', () => {
-        const testValues = [
+        const testValues: TestSet[] = [
             [5, 'V'],
             [115, 'CXV'],
             [1115, 'MCXV'],
@@ -16,7 +18,7 @@ describe('toRomanNumeral()', () => {
     });
 
     it('should convert integer number to simple roman numeral considering subtractive notation', () => {
-        const testValues = [
+        const testValues: TestSet[] = [
             [4, 'IV'],
             [9, 'IX'],
             [345, 'CCCXLV'],
