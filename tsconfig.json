@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "pretty": true
+  },
+  "include": [
+    "lib",
+    "index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
