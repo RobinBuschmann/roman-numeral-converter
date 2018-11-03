@@ -8,7 +8,7 @@ of type safety - You don't need to annotate everything with types, since typescr
 very strong in inferring types as well ❤️
 
 ## Installation
-**Precondition**: node.js need to be installed
+**Precondition**: node.js must be installed
 ```bash
 npm install
 ```
@@ -16,4 +16,9 @@ npm install
 ## Testing
 ```bash
 npm test
+```
+
+## Build
+```bash
+npm run build
 ```

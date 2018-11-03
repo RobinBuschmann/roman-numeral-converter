@@ -4,6 +4,7 @@
   "description": "Converts integer numbers to roman numerals",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "mocha"
   },
   "author": "Robin Baum",
