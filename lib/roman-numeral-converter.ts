@@ -1,6 +1,7 @@
+export const toRomanNumeral = (num: number) => {
+    validateNumber(num);
 
-export const toRomanNumeral = (num: number) =>
-    romanValues
+    return romanValues
         .reduce(({romanSymbols, remainder}, romanValue) => {
             const newRemainder = remainder % romanValue;
             const romanNumeralCount = Math.floor(remainder / romanValue);
@@ -12,11 +13,12 @@ export const toRomanNumeral = (num: number) =>
 
             return {
                 romanSymbols: newRomanSymbols,
-                remainder: newRemainder
+                remainder: newRemainder,
             };
         }, {romanSymbols: [] as string[], remainder: num})
         .romanSymbols
         .join('');
+};
 
 
 const romanValueSymbolMap = {
@@ -42,3 +44,12 @@ const romanValues = Object
 
 const createRomanSymbols = (count, romanValue) =>
     Array(count).fill(romanValueSymbolMap[romanValue]);
+
+const validateNumber = num => {
+    if (num < 0) {
+        throw new Error('Negative number values are not allowed');
+    }
+    if (num % 1 !== 0) {
+        throw new Error('Float number values are not allowed');
+    }
+};
