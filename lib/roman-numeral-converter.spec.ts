@@ -17,7 +17,7 @@ describe('toRomanNumeral()', () => {
         });
     });
 
-    it('should convert integer number to simple roman numeral considering subtractive notation', () => {
+    it('should convert integer number to roman numeral considering subtractive notation', () => {
         const testValues: TestSet[] = [
             [4, 'IV'],
             [9, 'IX'],
